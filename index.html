@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estúdio André Tattoo</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-image">
+            <img src="./assets/header.jpg" alt="Imagem do Estúdio">
+            <h1>Estúdio André Tattoo</h1>
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#agendar">Contato</a></li>
+            </ul>
+            <button class="dropdown-btn" onclick="toggleDropdown()">Menu</button>
+            <div class="dropdown-content" id="dropdown-menu">
+                <ul>
+                    <li><a href="#portfolio-mobile">Portfólio</a></li>
+                    <li><a href="#agendar">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seções principais do site -->
+        
+        <section id="sobre">
+            <h2>Sobre o Estúdio</h2>
+            <div> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis diam malesuada tellus sollicitudin pharetra. Curabitur id quam sed turpis convallis eleifend. Etiam mi ligula, scelerisque tempus condimentum auctor, malesuada quis odio. Duis vitae feugiat sapien. Integer auctor vestibulum sapien, nec eleifend risus iaculis quis. Morbi ac nisi nisl. Curabitur sit amet nisi condimentum, consectetur justo in, rhoncus nibh. Integer commodo ultrices turpis et rutrum. Aliquam lobortis laoreet dictum. Praesent efficitur posuere egestas. Aenean vitae consequat magna, at volutpat justo. Integer placerat et ex sed molestie.
+
+                Integer metus lorem, facilisis eu scelerisque id, egestas vitae neque. Nam quis faucibus nisi, eu porttitor ipsum. In cursus neque vel dapibus ullamcorper. Cras commodo egestas purus a ullamcorper. Vestibulum tempor gravida enim. Duis malesuada velit at lacinia iaculis. In lorem massa, ullamcorper id ligula eget, porttitor volutpat lectus. Donec interdum placerat nisi, et placerat quam posuere feugiat.</p>
+                
+                </div>
+        </section>
+        
+  <!-- Carrossel mobile -->
+  <section id="portfolio-mobile" class="mobile-carousel">
+    <h2>Portfólio</h2>
+    <div class="carousel-container">
+        <div class="carousel-images">
+            <img src="./assets/tattoo1.jpg" alt="Tatuagem 1">
+            <img src="./assets/tattoo2.jpg" alt="Tatuagem 2">
+            <img src="./assets/tattoo3.jpg" alt="Tatuagem 3">
+            <img src="./assets/tattoo4.jpg" alt="Tatuagem 4">
+            <img src="./assets/tattoo5.jpg" alt="Tatuagem 5">
+            <img src="./assets/tattoo6.jpg" alt="Tatuagem 6">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+
+<!-- Galeria de portfólio -->
+<section id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="portfolio-container">
+        <img src="./assets/tattoo1.jpg" alt="Tatuagem 1">
+        <img src="./assets/tattoo2.jpg" alt="Tatuagem 2">
+        <img src="./assets/tattoo3.jpg" alt="Tatuagem 3">
+        <img src="./assets/tattoo4.jpg" alt="Tatuagem 4">
+        <img src="./assets/tattoo5.jpg" alt="Tatuagem 5">
+        <img src="./assets/tattoo6.jpg" alt="Tatuagem 6 ">
+    </div>
+</section>
+
+<section id="agendar">
+    <h2>Contato</h2>
+    <p>Use o formulário abaixo para solicitar um orçamento ou agendar um procedimento.</p>
+
+    <div id="calendar">
+        <div class="form-container">
+            <form id="appointment-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+                
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Digite seu telefone">
+                
+                <label for="appointment-type">Tipo de Agendamento:</label>
+                <select id="appointment-type" name="appointment-type" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="budget">Solicitar Orçamento</option>
+                    <option value="procedure">Agendar Procedimento</option>
+                </select>
+
+                <div id="time-buttons" style="display: none;">
+                    <label>
+                        <input type="radio" name="time" value="morning"> Manhã
+                    </label>
+                    <label>
+                        <input type="radio" name="time" value="afternoon"> Tarde
+                    </label>
+                </div>
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Nos conte sua idéia"></textarea>
+
+                <div class="calendar-controls">
+                    <button id="prev-month"><<</button>
+                    <div id="month-year"></div>
+                    <button id="next-month">>></button>
+                </div>
+
+                <div class="weekdays days">
+                    <span>Dom</span><span>Seg</span><span>Ter</span>
+                    <span>Quar</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+                </div>
+                <div id="days" class="days"></div>
+                <button type="submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>© 2024 Tattoo Studio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+@font-face {
+    font-family: 'Old London';
+    src: url('./assets/fonts/OldLondon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+/* Estilos Gerais */
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header e Navegação */
+header {
+    width: 100%;
+    color: white;
+}
+
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem cobre o espaço */
+}
+
+.header-image h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    font-family: 'Old London';
+    font-size: 8em;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Efeito de sombra no texto */
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul li a {
+    display: flex;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(112, 112, 112);
+    width: 150px;
+    height: 50px;
+    margin-bottom: 5px;
+    border-radius: 3%;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: #131313; /* Cor ao passar o mouse */
+}
+
+/* Seções de Conteúdo */
+main {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+section p {
+    font-size: 1.2em;
+}
+
+#sobre {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    margin: 40px auto; /* Adiciona margem superior/inferior e centraliza horizontalmente */
+    max-width: 100%; /* Define uma largura máxima para a seção */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #f9f9f9; /* (Opcional) Define uma cor de fundo para destaque */
+    border-radius: 10px; /* (Opcional) Arredonda os cantos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona sombra */
+}
+
+#sobre h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 2em; /* Tamanho do título */
+    color: #333; /* Cor do título */
+}
+
+#sobre p {
+    font-size: 1.2em; /* Tamanho do texto do parágrafo */
+    color: #555; /* Cor do texto do parágrafo */
+}
+
+#agendar {
+    text-align: center; /* Centraliza o texto dentro da seção */
+    margin: 40px auto; /* Adiciona margem superior/inferior e centraliza horizontalmente */
+    max-width: 800px; /* Define uma largura máxima para a seção */
+    padding: 20px; /* Adiciona espaçamento interno */
+    background-color: #f9f9f9; /* (Opcional) Define uma cor de fundo para destaque */
+    border-radius: 10px; /* (Opcional) Arredonda os cantos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona sombra */
+}
+
+#agendar h2 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 2em; /* Tamanho do título */
+    color: #333; /* Cor do título */
+}
+
+#agendar p {
+    font-size: 1.2em; /* Tamanho do texto do parágrafo */
+    color: #555; /* Cor do texto do parágrafo */
+}
+
+/* Estilos do formulário */
+.form-container {
+    margin-bottom: 20px; /* Espaçamento inferior para separar do calendário */
+}
+
+#appointment-form {
+    display: flex;
+    flex-direction: column; /* Coloca os campos em coluna */
+    width: 100%; /* O formulário ocupa toda a largura do calendário */
+}
+
+label {
+    margin-bottom: 5px; /* Espaçamento inferior entre o rótulo e o campo */
+}
+
+input[type="text"], input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 15px; /* Espaçamento inferior entre os campos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #292929; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #666666; /* Cor de fundo ao passar o mouse */
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 15px; /* Espaçamento inferior entre os campos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    padding: 10px;
+    margin-bottom: 15px; /* Espaçamento inferior entre os campos */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+/* Carrossel mobile */
+.mobile-carousel {
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 20px auto; /* Margem automática para centralizar */
+    max-width: 100%; /* Limita a largura máxima */
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden; /* Oculta imagens fora da tela */
+    width: 100%; /* Largura total */
+}
+
+.carousel-images {
+    display: flex; /* Alinha as imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+}
+
+.carousel-images img {
+    width: 100%; /* Largura total da imagem */
+    max-width: 100%; /* Impede que as imagens ultrapassem a largura do contêiner */
+    flex-shrink: 0; /* Evita que as imagens sejam comprimidas */
+}
+
+/* Setas do carrossel */
+button.prev,
+button.next {
+    position: absolute; /* Posiciona os botões sobre as imagens */
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Garante que os botões fiquem acima das imagens */
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+/* Portfólio */
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite as imagens quebrarem em múltiplas linhas se necessário */
+    gap: 10px; /* Espaçamento entre as imagens */
+    
+}
+
+.portfolio-container img {
+    width: calc(16%); /* Calcula 20% da largura menos a margem entre as imagens */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar as imagens */
+    object-fit: cover; /* A imagem cobre o espaço */
+}
+
+.portfolio-container img:hover {
+    transform: scale(1.05); /* Pequeno efeito de zoom ao passar o mouse */
+    transition: transform 0.3s ease;
+}
+
+
+/* Estilo para o menu desktop */
+.desktop-menu {
+    display: flex; /* Alinha os itens horizontalmente */
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove espaçamento padrão */
+    margin: 0; /* Remove margens padrão */
+}
+
+.desktop-menu li {
+    margin-right: 20px; /* Espaço entre os itens */
+}
+
+.desktop-menu a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: rgb(255, 255, 255); /* Cor do texto */
+}
+
+/* Estilo do botão do menu dropdown */
+.dropdown-btn {
+    display: none; /* Oculta o botão por padrão */
+    background-color: rgb(112, 112, 112);
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+/* Estilo do menu dropdown */
+.dropdown-content {
+    display: none; /* Oculta o menu dropdown inicialmente */
+    position: absolute; /* Posiciona o menu em relação ao botão */
+    z-index: 1; /* Garante que fique acima de outros elementos */
+    border-radius: 10%;
+
+}
+
+.dropdown-content ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove espaçamento padrão */
+    margin: 0; /* Remove margens padrão */
+}
+
+
+.dropdown-content li a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    font-size: 1em;
+    width: 100px;
+    border-radius: 5%;
+    margin-bottom: 3px;
+}
+
+/* Estilo padrão para telas pequenas (mobile) */
+@media (max-width: 600px) {
+    .desktop-menu {
+        display: none; /* Oculta o menu desktop em dispositivos móveis */
+    }
+
+    .dropdown-btn {
+        display: block; /* Exibe o botão do menu dropdown em dispositivos móveis */
+    }
+
+    body {
+        padding: 10px; /* Adiciona um pouco de padding em telas pequenas */
+    }
+
+    .header-image h1 {
+        font-size: 4em; /* Reduz o tamanho do título */
+    }
+}
+
+/* Estilos do calendário */
+#calendar {
+    width: 80%; /* Aumenta a largura do calendário para 80% da tela */
+    max-width: 600px; /* Limita a largura máxima do calendário */
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto; /* Centraliza o calendário com margens automáticas */
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#month-year {
+    text-align: center;
+    font-size: 2em; /* Aumenta o tamanho da fonte */
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.days span {
+    width: 14.28%;
+    height: 60px; /* Aumenta a altura dos dias */
+    text-align: center;
+    line-height: 60px; /* Ajusta o alinhamento vertical */
+    cursor: pointer;
+}
+
+#days span:hover {
+    background-color: #ddd;
+}
+
+.selected {
+    background-color: #575757;
+    color: white;
+    border-radius: 10%;
+}
+
+
+/* Esconde o carrossel e mostra o portfólio */
+@media (min-width: 800px) {
+    #portfolio-mobile {
+        display: none; /* Esconde o carrossel em telas grandes */
+    }
+    #portfolio {
+        display: block; /* Garante que o portfólio seja exibido */
+    }
+    }
+
+/* Esconder o portfólio em telas pequenas */
+@media (max-width: 799px) {
+    .desktop-menu {
+        display: none; /* Oculta o menu desktop em dispositivos móveis */
+    }
+
+    .dropdown-btn {
+        display: block; /* Exibe o botão do menu dropdown em dispositivos móveis */
+    }
+
+    .header-image h1 {
+        display: flex;
+        gap: 40px;
+        font-size: 4em; /* Reduz o tamanho do título */
+    }
+
+    #portfolio {
+        display: none; /* Esconde o portfólio em telas pequenas */
+    }
+}
+
+
+@media (max-width: 1368px) {
+    .portfolio-container img {
+        width: calc(33% - 10px); /* Calcula 20% da largura menos a margem entre as imagens */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar as imagens */
+        object-fit: cover; /* A imagem cobre o espaço */
+    }
+}
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
